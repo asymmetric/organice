@@ -50,11 +50,13 @@ You can watch it on:
 - [[https://media.emacsconf.org/2019/05.html][emacsconf.org]]
 
 * Installation
-   <<installation>>
+:PROPERTIES:
+:CUSTOM_ID: installation
+:END:
 
 organice is a web application. You can use it from any browser. On iOS
 and Android, you can install organice to your homescreen. When
-started from there, it will run in full-screen and add some [[offline_support][offline
+started from there, it will run in full-screen and add some [[#offline_support][offline
 capabilities]].
 
 Installing to the homescreen on:
@@ -70,7 +72,7 @@ Installing to the homescreen on:
 "Current" means we're working hard on removing the following
 restrictions and expectations.
 
-- organice understands only a few in-buffer settings (see [[in_buffer_settings][Supported
+- organice understands only a few in-buffer settings (see [[#in_buffer_settings][Supported
   in-buffer configuration]])
   - Other in-buffer settings are imported and re-exported but are not
     editable with organice.
@@ -115,9 +117,11 @@ The strategy we're using with regards to the parser is this:
 - When the new one is finished, integrate it into organice.
 
 ** Progressive Web App / Offline Support
-    <<offline_support>>
+:PROPERTIES:
+:CUSTOM_ID: offline_support
+:END:
 
-organice can run as a PWA (Progressive Web App) - see the [[installation][installation
+organice can run as a PWA (Progressive Web App) - see the [[#installation][installation
 instructions]] and does have offline support. From your home screen,
 organice will start up in full screen and it will use a [[https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API][Service Worker]]
 to cache the application. On a desktop browser, the Service Worker
@@ -169,10 +173,12 @@ organice implements this customization strategy:
 
 - Use in-buffer settings where appropriate
 - Build custom and mobile friendly user interfaces where appropriate
-  - For example [[capture_templates][capture templates]]
+  - For example [[#capture_templates][capture templates]]
 
 ** Supported in-buffer configuration
-   <<in_buffer_settings>>
+:PROPERTIES:
+:CUSTOM_ID: in_buffer_settings
+:END:
 
 *** In-buffer settings
 
@@ -318,7 +324,7 @@ Since organice is a front-end only application, it can easily be
 deployed to any server capable of serving a static application.
 
 Please note: If you want the hosted application to connect to Dropbox
-or Google Drive, please read the section on [[synchronization_back_ends][Synchronization back-ends]].
+or Google Drive, please read the section on [[#synchronization_back_ends][Synchronization back-ends]].
 
 ** FTP
 
@@ -388,7 +394,9 @@ git push heroku master
 #+END_SRC
 
 ** Synchronization back-ends
-    <<synchronization_back_ends>>
+:PROPERTIES:
+:CUSTOM_ID: synchronization_back_ends
+:END:
 
 Note that logging in to Dropbox will only work if you're running the
 app on ~http://localhost:3000~, because all redirect URIs must be
@@ -472,7 +480,9 @@ RewriteRule ^ /index.html [L]
 #+END_EXAMPLE
 
 * Capture templates
-   <<capture_templates>>
+:PROPERTIES:
+:CUSTOM_ID: capture_templates
+:END:
 
 organice supports capture templates by implementing a flexible
 mechanism using URL parameters. These three of the following
@@ -523,7 +533,9 @@ https://organice.200ok.ch?captureTemplateName=Inbox&captureContent=Read+up+on+ca
 #+END_EXAMPLE
 
 *** With custom variable
-     <<media_capture>>
+:PROPERTIES:
+:CUSTOM_ID: media_capture
+:END:
 
 If you want to add web pages to a reading queue (with a title, a
 capture date and a URL), this would be a good starting point:
@@ -555,7 +567,7 @@ https://organice.200ok.ch?captureTemplateName=Media&captureContent=Play+Emacs+li
 Since organice is a web application, you can use the capture templates
 feature to create bookmarklets, of course! For example, if you want a
 bookmarklet to add the current page (title, capture date and URL) to
-your reading queue using [[media_capture][this capture template]], all you need is a
+your reading queue using [[#media_capture][this capture template]], all you need is a
 little bit of JavaScript:
 
 #+BEGIN_SRC javascript
